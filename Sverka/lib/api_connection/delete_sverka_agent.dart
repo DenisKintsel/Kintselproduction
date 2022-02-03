@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-const url = 'https://sverka.000webhostapp.com';
+const url = '//////////////';
 
 final Map<String, String> headers = {
     'Content-Type': 'application/json; charset=UTF-8',
