@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fon"
+    tools:context=".OpenProfil">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Имя:"
+        android:fontFamily="@font/roboto"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="30dp"
+        android:id="@+id/g_idname"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Номер телефона:"
+        android:textIsSelectable="true"
+        android:fontFamily="@font/roboto"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="30dp"
+        android:id="@+id/g_phone2"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Номер объявления:"
+        android:textIsSelectable="true"
+        android:fontFamily="@font/roboto"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="30dp"
+        android:id="@+id/nomtel"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        />
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    app:showAsAction="always"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/gryz"
+        android:title="Добавить груз"
+        android:onClick="onAbout"
+        android:orderInCategory="1"
+
+        android:fontFamily="@font/roboto"
+        android:textStyle="bold"
+
+
+        />
+    <item
+        android:id="@+id/drive"
+        android:title="Добавить водителя"
+        android:onClick="onAbout1"
+        android:orderInCategory="2"
+
+        android:fontFamily="@font/roboto"
+        android:textStyle="bold"/>
+
+
+</menu>

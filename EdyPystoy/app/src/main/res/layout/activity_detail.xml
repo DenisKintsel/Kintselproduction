@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/fon"
+    tools:context=".DetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            >
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="200dp"
+                android:layout_height="230dp"
+                android:layout_marginTop="30dp"
+                app:srcCompat="@android:drawable/ic_menu_camera" />
+
+
+        <LinearLayout
+            android:layout_width="230dp"
+            android:layout_height="285dp"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ID:"
+        android:id="@+id/g_id"
+        android:fontFamily="@font/roboto"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center">
+       </TextView>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Имя:"
+        android:fontFamily="@font/roboto"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="10dp"
+        android:id="@+id/g_idname"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+
+        />
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Пункт А:"
+        android:fontFamily="@font/roboto"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="10dp"
+        android:id="@+id/g_pynktA"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Пункт Б:"
+        android:fontFamily="@font/roboto"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="10dp"
+        android:id="@+id/g_pynktB"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        />
+        </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/openprofil"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Профиль"
+
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/formabtn"
+                    />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Груз:"
+        android:fontFamily="@font/roboto"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="30dp"
+        android:id="@+id/g_gryz"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Цена"
+        android:fontFamily="@font/roboto"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="30dp"
+        android:id="@+id/g_price"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Номер телефона:"
+        android:textIsSelectable="true"
+        android:fontFamily="@font/roboto"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="30dp"
+        android:id="@+id/g_phone2"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Телефон"
+        android:textIsSelectable="true"
+        android:fontFamily="@font/roboto"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="30dp"
+        android:id="@+id/g_phone"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        />
+
+    <Button
+        android:id="@+id/vzv"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:text="Позвонить"
+        android:background="@drawable/formabtn"
+        android:fontFamily="@font/roboto"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginTop="30dp"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
