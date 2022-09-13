@@ -1,0 +1,10 @@
+{
+    "hello": "Здравствуйте",
+    "transporter":"Перевозчики",
+    "search":"Поиск",
+    "departureDate":"Дата выезда",
+    "inProgress":"В ПРОЦЕССЕ",
+    "completed":"ВЫПОЛНЕННО",
+    "orders":"Заказы",
+    "cargo":"Груз"
+}

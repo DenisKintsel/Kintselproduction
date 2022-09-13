@@ -1,0 +1,10 @@
+{
+    "hello": "Hello",
+    "transporter":"Carrier",
+    "search":"Search",
+    "departureDate":"departure date",
+    "inProgress":"IN PROGRESS",
+    "completed":"COMPLETED",
+    "orders":"Orders",
+    "cargo":"Cargo"
+}
