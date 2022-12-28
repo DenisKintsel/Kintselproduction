@@ -1,17 +1,14 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:hive/hive.dart';
 import 'package:http/http.dart' as http;
-import 'package:meta/meta.dart';
 import 'dart:convert';
-import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:news_64/core_global/models/news_model/news_model.dart';
 import '../../core_global/error/failure.dart';
 import '../../core_global/models/news_detailed_model/news_detailed_model.dart';
+import '../../domain/entities/article_model.dart';
+import '../../domain/entities/important_model.dart';
 import '../../domain/entities/list_model.dart';
 import '../../domain/repositories/repository.dart';
-import '../../domain/usecases/NoParams/usecase.dart';
 
 class RegistrationUsersDataSourceImpl implements Repository {
   final http.Client client;
@@ -30,6 +27,36 @@ class RegistrationUsersDataSourceImpl implements Repository {
         result['body'].map((data) => NewsModel.fromJson(data)));
     if (response.body.isNotEmpty) {
       if (response.statusCode == 200 && response.body.isNotEmpty) {
+        if(category == ''){
+        var box = await Hive.openBox<listModel>('News');
+        final listModel listMod = listModel(result['body']);
+        final qqq = box.get('News')?.newsBD;
+        List list = [];
+        list = [...list, ...?qqq, ...listMod.newsBD];
+        print(list.length);
+        final listModel listMod2 = listModel(list);
+        await box.put('News', listMod2);
+        }
+        else if(category == 'top'){
+          var box = await Hive.openBox<importantModel>('top');
+          final importantModel listMod = importantModel(result['body']);
+          final qqq = box.get('top')?.newsImportantBD;
+          List list = [];
+          list = [...list, ...?qqq, ...listMod.newsImportantBD];
+          print(list.length);
+          final importantModel listMod2 = importantModel(list);
+          await box.put('top', listMod2);
+        }
+        else if(category == 'article'){
+          var box = await Hive.openBox<articleModel>('article');
+          final articleModel listMod = articleModel(result['body']);
+          final qqq = box.get('article')?.newsArticleBD;
+          List list = [];
+          list = [...list, ...?qqq, ...listMod.newsArticleBD];
+          print(list.length);
+          final articleModel listMod2 = articleModel(list);
+          await box.put('article', listMod2);
+        }
         return Right(listNews);
       } else {
         return Left(Failure(response.body));

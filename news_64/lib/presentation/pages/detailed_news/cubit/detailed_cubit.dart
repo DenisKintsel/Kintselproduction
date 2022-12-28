@@ -1,6 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 
 import '../../../../core_global/error/failure.dart';
@@ -27,6 +29,9 @@ class DetailedCubit extends Cubit<DetailedState> {
           emit(Initial(news));
         },
       );
+    } else {
+      Get.snackbar("Ой... что то пошло не так", "Отсутствует подключение к интернету",
+          duration: const Duration(milliseconds: 3000));
     }
   }
 

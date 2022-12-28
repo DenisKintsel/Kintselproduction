@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/widgets.dart';
 import 'package:intl/intl.dart';
 
@@ -66,7 +67,7 @@ class WindowNews extends StatelessWidget{
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Image.network(img,height: 80,width: 120,fit: BoxFit.fill,),
+                        Image(image: CachedNetworkImageProvider(img),height: 80,width: 120,fit: BoxFit.fill)
                       ],
                     ),
                   ))
