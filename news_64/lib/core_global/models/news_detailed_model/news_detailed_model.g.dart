@@ -14,7 +14,9 @@ NewsDetailedModel _$NewsDetailedModelFromJson(Map<String, dynamic> json) =>
       text: json['text'] as String?,
       url: json['url'] as String?,
       img: json['img'] as String?,
-    );
+    )..gallery = (json['gallery'] as List<dynamic>?)
+        ?.map((e) => Gallery.fromJson(e as Map<String, dynamic>))
+        .toList();
 
 Map<String, dynamic> _$NewsDetailedModelToJson(NewsDetailedModel instance) =>
     <String, dynamic>{
@@ -23,5 +25,6 @@ Map<String, dynamic> _$NewsDetailedModelToJson(NewsDetailedModel instance) =>
       'date': instance.date,
       'text': instance.text,
       'url': instance.url,
+      'gallery': instance.gallery,
       'img': instance.img,
     };
