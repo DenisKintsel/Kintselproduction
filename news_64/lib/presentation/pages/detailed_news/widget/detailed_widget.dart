@@ -4,6 +4,7 @@ import 'package:flutter_html/flutter_html.dart';
 
 import '../../../../core_global/colors/colors.dart';
 import '../../../../core_global/models/news_detailed_model/news_detailed_model.dart';
+import '../../../../core_global/widget/card_photo_widget.dart';
 
 class DetailedWidget extends StatefulWidget {
   final NewsDetailedModel detailed;
@@ -65,7 +66,10 @@ class _DetailedWidgetState extends State<DetailedWidget> {
                 height: 1,
               ),
               const SizedBox(height: 24),
-              Html(data: widget.detailed.text!)
+              Html(data: widget.detailed.text!),
+              if(widget.detailed.gallery != null)
+                RestaurantCardWidget(
+                  urls: widget.detailed.gallery!)
             ],
           ),
         ),

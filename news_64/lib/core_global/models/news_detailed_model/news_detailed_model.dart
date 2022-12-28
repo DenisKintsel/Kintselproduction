@@ -1,4 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+
+import 'gallery.dart';
 part 'news_detailed_model.g.dart';
 
 @JsonSerializable()
@@ -8,6 +10,7 @@ class NewsDetailedModel {
   String? date;
   String? text;
   String? url;
+  List<Gallery>? gallery;
   String? img;
 
   NewsDetailedModel(
